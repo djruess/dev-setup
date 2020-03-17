@@ -67,6 +67,8 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
     - Uncheck (disable) Shake mouse pointer to locate
 
 ## Applications and Development Tools
+1. Install Command Line Tools
+    1. Open terminal and type `xcode-select --install`
 1. [Install Homebrew](https://brew.sh/)
     1. Use `brew search _____` to search formulae and casks
     1. Use `brew cask install` to install casks, aka apps, from the command line
@@ -78,7 +80,7 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
         - bitwarden
         - iterm2
         - hazel
-        - league-oflegends
+        - league-of-legends
         - appcleaner
         - slack
         - balsamiq-wireframes
@@ -106,7 +108,29 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
     1. Remember that you can use 1. 1. 1. 1. to make an ordered list in markdown and it will automatically update the number order if you delete an item from the list.
     1. Reference of [GitHub flavored markdown](https://guides.github.com/features/mastering-markdown/)
 1. Install zsh
-    `brew install zsh`
+    1. Open terminal and type `brew install zsh`
+    1. Install Oh My Zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+    1. Add (enable) plugins by opening .zshrc file and adding in plugins, one per line, at the specified location in the document. Here are some you were using:
+        - git
+        - osx
+        - zsh_reload
 
-1.
-1.
+1. Install Node Version Manager (NVM)
+    1. Open terminal and type `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh)`
+    1. Restart iterm
+1. Install Extensions for VSCodium
+    - Prettier
+    - Visual Studio IntelliCode
+    - Code Spell Checker
+    - IntelliSense for CSS class names in HTML
+    - npm Intellisense
+    - Path Intellisense
+    - SCSS IntelliSense
+    - Tailwind CSS IntelliSense
+    - Tailwind sass syntax
+    
+1. Change Text Edit Settings so if you ever edit something in this, the format won't change
+    - In Preferences, in New Document, change format to plain text
+    - In Preferences, in Open and Save, change Opening Files and Saving Files to Unicode (UTF-8)
+
+
