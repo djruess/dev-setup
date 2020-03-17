@@ -1,7 +1,7 @@
 # dev-setup
 Notes to help guide me the next time I reinstall OSX or set up some development tools
 
-## OSX System Preferences
+# OSX System Preferences
 1. After a fresh install, update OSX with any available security updates
 1. Create a new admin user, log in to this new user to finalize it's setup, and then log out. From now on, only use your previous user account. This is so you always have an admin user you can log in with if something happens with your other user-account.
 1. In Security and Privacy
@@ -34,9 +34,14 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
     - Check (enable) Use Enhanced Dictation which allows offline use
 1. In Mouse
     - If you're still using a Logitech Mouse with GHub disable mouse acceleration by:
-        - Open up terminal and check if mouse acceleration is enabled by typing 
-        `defaults find scaling`
-        - In terminal type `defaults write .GlobalPreferences com.apple.mouse.scaling -1.` to disable mouse acceleration completely
+        - Open up your terminal and check if mouse acceleration is enabled by typing 
+            ```
+            defaults find scaling
+            ```
+        - In terminal type the following to disable mouse acceleration completely
+            ```
+            defaults write .GlobalPreferences com.apple.mouse.scaling -1.
+            ```
     - Make sure scrolling speed is at the 5th notch or lower, so that mouse scrolling still works when using Synergy to control another mac computer
 1. In Printer
     - Install Brother HL-2270DW driver (find on web if needed, or just grab it from another mac that's on the network)
@@ -66,12 +71,28 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
 1. In Accessibility
     - Uncheck (disable) Shake mouse pointer to locate
 
-## Applications and Development Tools
+# Applications and Development Tools
 1. Install Command Line Tools
-    1. Open terminal and type `xcode-select --install`
+    1. Open your terminal and type 
+        ```
+        xcode-select --install
+        ```
+
 1. [Install Homebrew](https://brew.sh/)
+    ```
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    ```
+1. Tap homebrew's cask/fonts
+    ```
+    brew tap homebrew/cask-fonts
+    ```
+    - To install a font (where inconsolata is the name of the font you wish to install) 
+    ```
+    brew cask install font-inconsolata
+    ```
+1. Other Tips
     1. Use `brew search _____` to search formulae and casks
-    1. Use `brew cask install` to install casks, aka apps, from the command line
+    1. Use `brew cask install ____` to install casks, aka apps, from the command line
     1. Use `brew cask outdated` to see what apps can be updated
     1. Use `brew cask upgrade` to update all of the apps that can be updated  
     1. Here is a list of the apps you currently have installed through `brew cask install`
@@ -105,19 +126,65 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
         - anki
 1. [Download GitHub Desktop](https://desktop.github.com/) and install it.
     1. Change preferences in GitHub Desktop to preferred editor and shell
-    1. Remember that you can use 1. 1. 1. 1. to make an ordered list in markdown and it will automatically update the number order if you delete an item from the list.
+    1. Remember that you can create an ordered list by using "1." for each item. This way it will automatically update the number order if you rearrange or delete an item from the list. Example:
+        ```
+        1. First ordered item 
+        1. Second ordered item
+        1. Third ordered item
+        ```
     1. Reference of [GitHub flavored markdown](https://guides.github.com/features/mastering-markdown/)
+    
+## Zsh   
 1. Install zsh
-    1. Open terminal and type `brew install zsh`
-    1. Install Oh My Zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-    1. Add (enable) plugins by opening .zshrc file and adding in plugins, one per line, at the specified location in the document. Here are some you were using:
-        - git
-        - osx
-        - zsh_reload
+```
+brew install zsh
+```
+1. Change the default shell to zsh
+```
+chsh -s /bin/zsh
+```
+## Oh My Zsh
+
+1. Install Oh My Zsh 
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+1. Add (activate) plugins by opening .zshrc file and adding in plugins, one per line, at the specified location in the document. Here are some you are using:
+    - git
+    - osx
+    - zsh_reload
+1. Install powerline theme by typing ```
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k```
+
+1. Open .zshrc file and replace default Oh My Zsh theme with ```
+ZSH_THEME="powerlevel9k/powerlevel9k"```
+
+1. Install powerline fonts by typing ```
+```
+
+1. Install zsh-syntax-highlighting
+    1. Clone the repository ```
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting```
+
+    2. Add (activate) plugin in the .zshrc file by typing ```
+    sh-syntax-highlighting```
+        and **REMEMBER - This must be the last plugin listed!**
+1. Modify iterm2 Preferences
+    1. Duplicate default profile so you can always have the default as a backup
+    2. Increase font size as needed
+    3. Add these MacOS shortcuts for more movability using the keyboard (located under Profiles -> Keys -> +) (learned from  http://sourabhbajaj.com/mac-setup/iTerm/)
+        - shortcut: ⌘←, Action: Send Escape Sequence, Esc+: OH
+        - shortcut: ⌘→, Action: Send Escape Sequence, Esc+: OF
+        - shortcut: ⌥←, Action: Send Escape Sequence, Esc+: b
+        - shortcut: ⌥→, Action: Send Escape Sequence, Esc+: f
 
 1. Install Node Version Manager (NVM)
-    1. Open terminal and type `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh)`
-    1. Restart iterm
+    1. Open terminal and type ```
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh)```
+
+    1. Restart iterm (you can do this by either typing ```
+    src```
+    , if you have activated the zsh_reload plugin. Otherwise )
 
 1. Install Extensions for VSCodium
     - Prettier
