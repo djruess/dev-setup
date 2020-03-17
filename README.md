@@ -118,6 +118,7 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
 1. Install Node Version Manager (NVM)
     1. Open terminal and type `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh)`
     1. Restart iterm
+
 1. Install Extensions for VSCodium
     - Prettier
     - Visual Studio IntelliCode
@@ -129,7 +130,7 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
     - Tailwind CSS IntelliSense
     - Tailwind sass syntax
     
-1. Change Text Edit Settings so if you ever edit something in this, the format won't change
+1. Change Text Edit Settings so if you ever edit something in this app, the format won't change
     - In Preferences, in New Document, change format to plain text
     - In Preferences, in Open and Save, change Opening Files and Saving Files to Unicode (UTF-8)
 
