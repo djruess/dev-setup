@@ -244,6 +244,17 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
         ```
         nvm install --lts=Dubnium
         ```
+    1. Install/update npm
+        ```
+        nvm install-latest-npm
+        ```
+    1. To install local (the folder you are currently in) or global
+        ```
+        $ npm install <package> # Install locally
+        ```
+        ```
+        $ npm install -g <package> # Install globally
+        ```
 ---
 
 ### Python - 
@@ -256,6 +267,14 @@ How to install it the right way - learned from here: https://opensource.com/arti
 1. Install the latest version - [figure out what that is here](https://www.python.org/downloads/)
     ```
     pyenv install 3.8.2
+    ```
+1. Set global python version
+    ```
+    pyenv global 3.8.2
+    ```
+1. Next type this to add it to your .zshrc file
+    ```
+    echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
     ```
 ---
 ## VSCodium
