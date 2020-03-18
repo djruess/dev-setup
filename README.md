@@ -158,6 +158,7 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
 1. Add (activate) plugins by opening .zshrc file and adding in plugins, one per line, at the specified location in the document. Here are some you are using:
     - `git`
     - `osx`
+    - `nvm`
     - `zsh_reload`
 1. Add the line below to remove the user@user prompt at the beginning of every line
     ```
@@ -217,8 +218,6 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
         - shortcut: ⌥→, Action: Send Escape Sequence, Esc+: f
 ---
 
-
-
 ### NVM & Node
 1. Install Node Version Manager (NVM)
     1. Install NVM. Open iterm and type 
@@ -246,6 +245,19 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
         nvm install --lts=Dubnium
         ```
 ---
+
+### Python - 
+How to install it the right way - learned from here: https://opensource.com/article/19/5/python-3-default-mac
+
+1. First install pyenv with brew (this for python what nvm is for node)
+    ```
+    brew install pyenv
+    ```
+1. Install the latest version - [figure out what that is here](https://www.python.org/downloads/)
+    ```
+    pyenv install 3.8.2
+    ```
+---
 ## VSCodium
 1. Install Extensions for VSCodium
     - Prettier
@@ -257,7 +269,7 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
     - SCSS IntelliSense
     - Tailwind CSS IntelliSense
     - Tailwind sass syntax
-
+---
 ## Text Edit    
 1. Change Text Edit Settings so if you ever edit something in this app, the format won't change
     - In Preferences, in New Document, change format to plain text
