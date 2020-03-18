@@ -146,29 +146,38 @@ chsh -s /bin/zsh
 ## Oh My Zsh
 
 1. Install Oh My Zsh 
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
+    ```
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
 1. Add (activate) plugins by opening .zshrc file and adding in plugins, one per line, at the specified location in the document. Here are some you are using:
     - git
     - osx
     - zsh_reload
 1. Install powerline theme by typing ```
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k```
+1. Line below removes the user@user prompt at the beginning of every line
+    ```
+    export DEFAULT_USER=`whoami`
+    ```
+1. Open .zshrc file and replace default Oh My Zsh theme with 
+    ```
+    ZSH_THEME="powerlevel9k/powerlevel9k"
+    ```
+1. Install powerline fonts by typing 
+    ```
 
-1. Open .zshrc file and replace default Oh My Zsh theme with ```
-ZSH_THEME="powerlevel9k/powerlevel9k"```
-
-1. Install powerline fonts by typing ```
-```
+    ```
 
 1. Install zsh-syntax-highlighting
-    1. Clone the repository ```
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting```
-
-    2. Add (activate) plugin in the .zshrc file by typing ```
-    sh-syntax-highlighting```
-        and **REMEMBER - This must be the last plugin listed!**
+    1. Clone the repository 
+    ```
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    ```
+    2. Add (activate) plugin in the .zshrc file by typing 
+    ```
+    sh-syntax-highlighting
+    ```
+    and **REMEMBER - This must be the last plugin listed!**
 1. Modify iterm2 Preferences
     1. Duplicate default profile so you can always have the default as a backup
     2. Increase font size as needed
@@ -179,12 +188,15 @@ ZSH_THEME="powerlevel9k/powerlevel9k"```
         - shortcut: ⌥→, Action: Send Escape Sequence, Esc+: f
 
 1. Install Node Version Manager (NVM)
-    1. Open terminal and type ```
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh)```
-
-    1. Restart iterm (you can do this by either typing ```
-    src```
-    , if you have activated the zsh_reload plugin. Otherwise )
+    1. Open terminal and type 
+    ```
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh)
+    ```
+    1. Restart iterm (you can do this by either typing 
+    ```
+    src
+    ```
+    if you have activated the zsh_reload plugin. Otherwise )
 
 1. Install Extensions for VSCodium
     - Prettier
