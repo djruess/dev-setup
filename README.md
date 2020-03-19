@@ -207,15 +207,31 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
     zsh-autosuggestions
     ```
 ---
+### Karabiner Elements
+1. Install Karabiner Elements so you can switch the Caps-Lock key and Escape Key on your keyboard.
+    ```
+    brew cask install karabiner-elements
+    ```
+1. You probably have ot open up System Preferences and allow the program to be installed.
+1. Then go back and reinstall Karabiner Elements via the command line
+    ``` 
+    brew cask reinstall karabiner-elements
+    ```
+1. Once Karabiner Elements is installed. Add two simple modifications. 
+    1. **From Key:** Caps Lock |  **To Key:** Escape. 
+    1. **From Key:** Escape | **To Key:** Caps Lock
+1. Now you can add a system wide hotkey for iTerm2 (instructions below).
+---
 ### iTerm2 Preferences
 1. Modify iterm2 Preferences
     1. Duplicate default profile so you can always have the default as a backup
-    2. Increase font size as needed
-    3. Add these MacOS shortcuts for more movability using the keyboard (located under Profiles -> Keys -> +) (learned from  http://sourabhbajaj.com/mac-setup/iTerm/)
+    1. Increase font size as needed
+    1. Add these MacOS shortcuts for more movability using the keyboard (located under Profiles -> Keys -> +) (learned from  http://sourabhbajaj.com/mac-setup/iTerm/)
         - shortcut: ⌘←, Action: Send Escape Sequence, Esc+: OH
         - shortcut: ⌘→, Action: Send Escape Sequence, Esc+: OF
         - shortcut: ⌥←, Action: Send Escape Sequence, Esc+: b
         - shortcut: ⌥→, Action: Send Escape Sequence, Esc+: f
+    1. Navigate to Keys -> Hokey and record Command+Esc key for the system-wide hotkey. You will probably have to  
 ---
 
 ### NVM & Node
