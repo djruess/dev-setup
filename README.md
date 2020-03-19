@@ -95,6 +95,7 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
     ```
 1. Other Tips
     1. Use `brew search _____` to search formulae and casks
+    1. Use `brew leaves` to see a list of your top level formulae, aka no dependecies, that are installed
     1. Use `brew cask install ____` to install casks, aka apps, from the command line
     1. Use `brew cask outdated` to see what apps can be updated
     1. Use `brew cask upgrade` to update all of the apps that can be updated  
