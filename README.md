@@ -2,7 +2,6 @@
 Notes to help guide me the next time I reinstall OSX or set up some development tools
 
 ## OSX System Preferences
----
 1. After a fresh install, update OSX with any available security updates
 1. Create a new admin user, log in to this new user to finalize it's setup, and then log out. From now on, only use your previous user account. This is so you always have an admin user you can log in with if something happens with your other user-account.
 1. In Security and Privacy
@@ -71,8 +70,9 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
     - Double check login items (do this after you install certain Applications as well)
 1. In Accessibility
     - Uncheck (disable) Shake mouse pointer to locate
+---
 
-# Applications and Development Tools
+## Applications and Development Tools
 
 ### Install Command Line Tools
 1. Open your terminal and type 
@@ -192,21 +192,33 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
     ```
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     ```
-1. Add (activate) the plugin in the .zshrc file, and **REMEMBER - This must be the last plugin listed!**
+1. Add the plugin to the plugin list in the .zshrc file, and **REMEMBER - This must be the last plugin listed!**
     ```
     zsh-syntax-highlighting
     ```
-1. Restart iTerm
+1. Restart iTerm. Type `src` and hit enter.
 ---
 ### Install zsh-autosuggestions
 1. Clone the repository
     ```
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     ```
-1. Add (activate) the plugin in the .zshrc file
+1. Add the plugin to the plugin list in the .zshrc file
     ```
     zsh-autosuggestions
     ```
+1. 1. Restart iTerm. Type `src` and hit enter.
+---
+### Install zsh-nvm
+1. Clone the repository
+    ```
+    git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+    ```
+1. Add the plugin to the plugin list in the .zshrc file
+    ```
+    zsh-nvm
+    ```
+1. Restart iTerm. Type `src` and hit enter.
 ---
 ### Karabiner Elements
 1. Install Karabiner Elements so you can switch the Caps-Lock key and Escape Key on your keyboard.
