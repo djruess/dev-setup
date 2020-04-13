@@ -247,7 +247,7 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
     1. Navigate to Keys -> Hokey and record Command+Esc key for the system-wide hotkey. You will probably have to  
 ---
 
-### NVM & Node
+### NVM & Node & Yarn
 1. Install Node Version Manager (NVM)
     1. Install NVM. Open iterm and type 
         ```
@@ -283,6 +283,15 @@ Notes to help guide me the next time I reinstall OSX or set up some development 
         ```
         ```
         $ npm install -g <package> # Install globally
+        ```
+1. Install Yarn
+    1. Install Yarn
+        ```
+        npm install -g yarn
+        ```
+    1. Check that it's installed
+        ```
+        yarn -v
         ```
 ---
 
